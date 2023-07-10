@@ -11,8 +11,19 @@
 
 .container
 {
-    max-width: 90%;
+    max-width: 88%;
     margin: 0 auto;
+}
+
+ul
+{
+    list-style: none;
+}
+
+a
+{
+    text-decoration: none;
+    color: inherit;
 }
 
 header
@@ -23,4 +34,91 @@ header
 .info
 {
     background-color: $info;
+    height: 30px;
+    color: white;
+    font-size: 15px;
+    font-family: sans-serif;
+    
+    > .container
+    {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: inherit;
+    }
+
+    p
+    {
+        font-size: 13px;
+        font-weight: bold;
+    }
+}
+
+.infoIcons
+{
+    height: inherit;
+    display: flex;
+    margin-left: 10px;
+
+    > li
+    {
+        display: block;
+        height: inherit;
+        width: 30px;
+    } 
+
+    > li:nth-child(2)
+    {
+        border-right: 1px darkslategrey solid;
+        border-left: 1px darkslategrey solid;
+    
+    }
+}
+
+.infoIcons a
+{
+    height: inherit;
+    width: inherit;
+    display: flex;
+    // align-items: center;
+    justify-content: center;
+}
+
+.twitterIcon, .dribbbleIcon, .instagramIcon
+{
+    height: inherit;
+    width: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.twitterIcon
+{
+    transition: 0.4s;
+
+    &:hover
+    {
+        background-color: $twitter;
+    }
+}
+
+.dribbbleIcon
+{
+    transition: 0.4s;
+
+    &:hover
+    {
+        background-color: $dribbble
+    }
+}
+
+.instagramIcon
+{
+    transition: 0.4s;
+
+    &:hover
+    {
+        background-color: $instagram;
+    }
 }
