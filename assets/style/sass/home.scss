@@ -1,124 +1,347 @@
 @import "_var";
 
+@font-face {
+    font-family: header;
+    src: url("../../font/head.woff2");
+}
+
 *,
 *::before,
-*::after
-{
+*::after {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-.container
-{
+.container {
     max-width: 88%;
     margin: 0 auto;
 }
 
-ul
-{
+ul {
     list-style: none;
 }
 
-a
-{
+a {
     text-decoration: none;
     color: inherit;
 }
 
-header
-{
-    height: 20vh;
+input[type="checkbox"] {
+    display: none;
 }
 
-.info
-{
-    background-color: $info;
+.info {
+    background-color: $darkBlue;
     height: 30px;
     color: white;
     font-size: 15px;
-    font-family: sans-serif;
-    
-    > .container
-    {
+    font-family: header;
+
+    >.container {
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        height: inherit;
+        height: 100%;
     }
 
-    p
-    {
-        font-size: 13px;
+    p {
+        font-size: 12px;
         font-weight: bold;
     }
-}
 
-.infoIcons
-{
-    height: inherit;
-    display: flex;
-    margin-left: 10px;
+    .infoIcons {
+        height: 100%;
+        display: flex;
+        margin-left: 10px;
 
-    > li
-    {
-        display: block;
-        height: inherit;
-        width: 30px;
-    } 
+        >li {
+            display: block;
+            height: 100%;
+            width: 30px;
+        }
 
-    > li:nth-child(2)
-    {
-        border-right: 1px darkslategrey solid;
-        border-left: 1px darkslategrey solid;
-    
+        >li:nth-child(2) {
+            border-right: 1px darkslategrey solid;
+            border-left: 1px darkslategrey solid;
+        }
+    }
+
+    .infoIcons a {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        // align-items: center;
+        justify-content: center;
+    }
+
+    .twitterIcon,
+    .dribbbleIcon,
+    .instagramIcon {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .twitterIcon {
+        transition: 0.4s;
+
+        &:hover {
+            background-color: $twitter;
+        }
+    }
+
+    .dribbbleIcon {
+        transition: 0.4s;
+
+        &:hover {
+            background-color: $dribbble
+        }
+    }
+
+    .instagramIcon {
+        transition: 0.4s;
+
+        &:hover {
+            background-color: $instagram;
+        }
     }
 }
 
-.infoIcons a
-{
-    height: inherit;
-    width: inherit;
-    display: flex;
-    // align-items: center;
-    justify-content: center;
-}
 
-.twitterIcon, .dribbbleIcon, .instagramIcon
-{
-    height: inherit;
-    width: inherit;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+header {
+    height: auto;
+    position: sticky;
+    top: 0;
 
-.twitterIcon
-{
-    transition: 0.4s;
+    .headerNav {
+        width: 100%;
+        height: 70px;
+        background-color: white;
 
-    &:hover
-    {
-        background-color: $twitter;
+        >.container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
+
+        .navLeft {
+            width: auto;
+
+            .logo {
+                width: 300px;
+            }
+        }
+
+        .navRight {
+            height: 100%;
+            font-family: header;
+            font-size: 13px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            ul {
+                height: 100%;
+                display: flex;
+                color: $silver;
+
+                .navRightItem {
+                    text-transform: capitalize;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-bottom: 2px transparent solid;
+                    transition: 0.8s;
+                }
+
+                .navRightItem:last-child {
+                    text-transform: uppercase;
+                }
+
+                .navRightItem:hover:not(.about),
+                .navRightItem:first-child {
+                    border-bottom: 2px $darkBlue solid;
+                    color: black;
+                }
+
+                .navRightLink {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    border-right: 2px $silver solid;
+                    padding: 0 20px;
+                }
+
+                .navRightItem:last-child a {
+                    border-right: 2px transparent solid;
+                }
+
+                .about {
+                    position: relative;
+
+                    &:hover {
+                        color: black;
+
+                        .aboutList {
+                            border-top: 2px $darkBlue solid;
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+
+                    .aboutList {
+                        background-color: white;
+                        width: 200px;
+                        height: 100px;
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        border-top: 2px transparent solid;
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: 0.8s;
+
+                        .aboutUL {
+                            padding: 0 10px;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            justify-content: space-around;
+                        }
+
+                        .aboutLI {
+                            text-transform: capitalize;
+                        }
+
+                        .aboutLink:hover {
+                            color: black;
+                        }
+                    }
+                }
+            }
+
+            .navRightButton {
+                height: 100%;
+                display: flex;
+                align-items: center;
+
+                &:hover .touch {
+                    filter: brightness(125%);
+                }
+
+                .touch {
+                    padding: 10px;
+                    background-color: $darkBlue;
+                    color: white;
+                    border-radius: 2px;
+
+                }
+            }
+
+            .navRightSearch {
+                color: $silver;
+                width: 40px;
+                height: 100%;
+                position: relative;
+                transition: 0.8s;
+
+                &:hover, #searchCheck:checked {
+                    color: black;
+                }
+
+                
+                &:hover .searchBarBox
+                {
+                    color: white;
+                }
+
+                #searchCheck:checked ~ .searchBarBox {
+                    visibility: visible;
+                    opacity: 1;
+                }
+
+                .searchIcon
+                {
+                    cursor: pointer;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .searchBarBox {
+                    position: absolute;
+                    top: calc(100% + 20px);
+                    right: 0;
+                    width: 400px;
+                    height: 100px;
+                    background-color: white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    opacity: 0;
+                    visibility: hidden;
+                    border: 1px lightgray solid;
+                    box-shadow: 0 0 15px 1px black;
+
+                    .triangle
+                    {
+                        display: inline-block;
+                        width: 40px;
+                        height: 40px;
+                        border-right: 20px transparent solid;
+                        border-left: 20px transparent solid;
+                        border-bottom: 20px white solid;
+                        position: absolute;
+                        bottom: 100%;
+                        right: 10px;
+                    }
+
+                    .searchBar
+                    {
+                        height: 50px;
+                        width: 250px;
+                        padding: 0 10px;
+                        color: gray;
+                    }
+
+                    input.searchBar
+                    {
+                        border: 1px lightgray solid;
+                    }
+
+                    .searchButton
+                    {
+                        width: 50px;
+                        height: 50px;
+                        background-color: $darkBlue;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 20px;
+                        transition: 0.8s;
+
+                        &:hover
+                        {
+                            filter: brightness(150%);
+                        }
+                    }
+                }
+            }
+        }
+
     }
 }
 
-.dribbbleIcon
-{
-    transition: 0.4s;
-
-    &:hover
-    {
-        background-color: $dribbble
-    }
-}
-
-.instagramIcon
-{
-    transition: 0.4s;
-
-    &:hover
-    {
-        background-color: $instagram;
-    }
+.test {
+    background-color: red;
+    width: 100%;
+    height: 500vh;
 }
