@@ -41,9 +41,104 @@ input[type="checkbox"] {
     display: none;
 }
 
+// usable items ********************************************************
+.mainButton {
+    height: 50px;
+    width: 150px;
+    border-radius: 50px;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(1em - 5px);
+    transition: 0.5s;
+    
+    span, .angleRight {
+        position: relative;
+        transition: 0.5s;
+    }
+
+    span {
+        right: 0;
+    }
+
+    .angleRight {
+        opacity: 0;
+        visibility: hidden;
+        left: 0;
+    }
+    
+    &:hover {
+        width: 170px;
+        
+        span {
+            right: 10px;
+        }
+        
+        .angleRight {
+            position: relative;
+            opacity: 1;
+            visibility: visible;
+            left: 10px;
+        }
+    }
+}
+
+.infoBox {
+    padding: 25px 50px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    h3 {
+        font-family: 'cormorant garamond';
+        font-size: calc(2em - 10px);
+        font-weight: 200;
+    }
+    
+    p {
+        font-size: calc(1em - 4px);
+    }
+
+}
+
+
+.seprate {
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+
+    .icon {
+        position: relative;
+        color: gray;
+    }
+
+    .icon::before, .icon::after {
+        content: "";
+        display: block;
+        width: 50px;
+        border-bottom: 1px gray solid;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+
+    .icon::before {
+        right: calc(100% + 10px);
+    }
+    
+    .icon::after {
+        left: calc(100% + 10px);
+    }
+}
+// ******************************************************************
+
+
 .cookie {
     width: 100%;
     height: 80px;
+    z-index: 99;
     position: fixed;
     bottom: 0;
     background-color: $darkBlue;
@@ -173,6 +268,7 @@ header {
     height: auto;
     position: sticky;
     top: 0;
+    z-index: 99;
 
     .headerNav {
         width: 100%;
@@ -418,12 +514,12 @@ main {
         align-items: center;
         flex-direction: column;
     
-        .mainTitle p {
+        p {
             font-size: 1em;
             font-family: header;
         }
     
-        .mainTitle h2 {
+        h2 {
             font-size: 4em;
             font-family: 'cormorant garamond';
             font-weight: 100;
@@ -437,26 +533,10 @@ main {
         text-transform: none;
 
         .infoBox {
-            padding: 25px 50px;
-            height: 300px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-
-            h3 {
-                font-family: 'cormorant garamond';
-                font-size: calc(2em - 10px);
-                font-weight: 200;
-            }
-            
-            p {
-                font-size: calc(1em - 4px);
-            }
-    
             &:first-child {
                 background-color: white;
                 color: black;
-    
+        
                 .mainButton {
                     background-color: $blue;
                     color: white;
@@ -470,59 +550,16 @@ main {
             &:last-child {
                 background-color: $darkBlue2;
             }
-    
+        
             &:nth-child(2), &:last-child {
                 .mainButton {
                     background-color: white;
                     color: black
                 }
             }
-
         }
     }
     
-}
-
-.mainButton {
-    height: 50px;
-    width: 150px;
-    border-radius: 50px;
-    align-self: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: calc(1em - 5px);
-    transition: 0.5s;
-    
-    span, .angleRight {
-        position: relative;
-        transition: 0.5s;
-    }
-
-    span {
-        right: 0;
-    }
-
-    .angleRight {
-        opacity: 0;
-        visibility: hidden;
-        left: 0;
-    }
-    
-    &:hover {
-        width: 170px;
-        
-        span {
-            right: 10px;
-        }
-        
-        .angleRight {
-            position: relative;
-            opacity: 1;
-            visibility: visible;
-            left: 10px;
-        }
-    }
 }
 
 .services {
@@ -551,7 +588,6 @@ main {
         display: grid;
         grid-template-rows: repeat(3, 1fr 20px);
         grid-template-columns: 1fr;
-
     }
     
     .serviceTitle {
@@ -564,35 +600,6 @@ main {
         
         h2 {
             font-size: 3em;
-        }
-    }
-
-    .seprate {
-        display: flex;
-        justify-content: center;
-        font-size: 1em;
-
-        .icon {
-            position: relative;
-            color: gray;
-        }
-
-        .icon::before, .icon::after {
-            content: "";
-            display: block;
-            width: 50px;
-            border-bottom: 1px gray solid;
-            position: absolute;
-            top: 50%;
-            transform: translate(0, -50%);
-        }
-
-        .icon::before {
-            right: calc(100% + 10px);
-        }
-        
-        .icon::after {
-            left: calc(100% + 10px);
         }
     }
 
@@ -659,13 +666,13 @@ main {
     
     h3 {
         font-family: "cormorant garamond";
-        font-size: 2em;
+        font-size: calc(2em - 5px);
         font-weight: 100;
     }
 
     p, .mainButton {
         font-family: header;
-        font-weight: 100;
+        font-weight: 400;
     }
     
     .mainButton {
@@ -676,6 +683,86 @@ main {
     }
 }
 
+.area {
+    height: 150vh;
+
+    .container {
+        height: 100%;
+        display: grid;
+        grid-template-rows: 1fr 20px 4fr;
+        grid-template-columns: 1fr;
+    }
+
+    h2, h3 {
+        font-family: "cormorant garamond";
+        font-weight: 200;
+        margin: 20px 0;
+    }
+
+    p {
+        font-family: header;
+        font-weight: 100;
+        letter-spacing: 1px;
+    }
+
+    .areaDetails {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+        padding: 50px 0;
+
+        .infoBox {
+            height: 100%;
+            color: white;
+            text-align: center;
+            font-size: 20px;
+            justify-content: space-between;
+
+            .infoBoxIcon {
+                width: 100px;
+                height: 100px;
+                margin: 0 auto;
+            }
+
+            .finance {
+                background: url("../../icon/finance.png") no-repeat center center / contain;
+            }
+
+            .bank {
+                background: url("../../icon/bank.png") no-repeat center center / contain;
+            }
+            
+            .wallet {
+                background: url("../../icon/wallet.png") no-repeat center center / contain;
+            }
+            
+            .car {
+                background: url("../../icon/car.png") no-repeat center center / contain;
+            }
+
+            h3 {
+                font-size: calc(1em + 8px);
+                font-weight: 800;
+                margin-top: 0;
+            }
+
+            .mainButton {
+                background-color: white;
+                color: black;
+            }
+        }
+
+        .infoBox:nth-child(2n) {
+            background-color: $blue
+        }
+
+        .infoBox:nth-child(2n -1) {
+            background-color: $darkBlue2;
+        }
+    }
+}
+
 .test {
     width: 100%;
     height: 500vh;
@@ -683,5 +770,10 @@ main {
     .mainButton {
         background-color: blue;
         color: white;
+    }
+
+    .infoBox {
+        width: 300px;
+        background-color: yellow;
     }
 }
