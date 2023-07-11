@@ -417,17 +417,17 @@ main {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-    }
-
-    .mainTitle p {
-        font-size: 1em;
-        font-family: header;
-    }
-
-    .mainTitle h2 {
-        font-size: 4em;
-        font-family: 'cormorant garamond';
-        font-weight: 100;
+    
+        .mainTitle p {
+            font-size: 1em;
+            font-family: header;
+        }
+    
+        .mainTitle h2 {
+            font-size: 4em;
+            font-family: 'cormorant garamond';
+            font-weight: 100;
+        }
     }
 
     .mainInfo {
@@ -453,55 +453,11 @@ main {
                 font-size: calc(1em - 4px);
             }
     
-            .infoBoxButton {
-                height: 50px;
-                width: 150px;
-                border-radius: 50px;
-                align-self: center;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-size: calc(1em - 5px);
-                transition: 0.5s;
-                
-                .angleRight {
-                    opacity: 0;
-                    visibility: hidden;
-                }
-
-                span, .angleRight {
-                    position: relative;
-                    transition: 0.5s;
-                }
-
-                span {
-                    right: 0;
-                }
-
-                .angleRight {
-                    left: 0;
-                }
-                
-                &:hover {
-                    width: 170px;
-                    
-                    span {
-                        right: 10px;
-                    }
-                    
-                    .angleRight {
-                        opacity: 1;
-                        visibility: visible;
-                        left: 10px;
-                    }
-                }
-            }
-            
             &:first-child {
                 background-color: white;
                 color: black;
     
-                .infoBoxButton {
+                .mainButton {
                     background-color: $blue;
                     color: white;
                 }
@@ -516,7 +472,7 @@ main {
             }
     
             &:nth-child(2), &:last-child {
-                .infoBoxButton {
+                .mainButton {
                     background-color: white;
                     color: black
                 }
@@ -525,6 +481,48 @@ main {
         }
     }
     
+}
+
+.mainButton {
+    height: 50px;
+    width: 150px;
+    border-radius: 50px;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(1em - 5px);
+    transition: 0.5s;
+    
+    span, .angleRight {
+        position: relative;
+        transition: 0.5s;
+    }
+
+    span {
+        right: 0;
+    }
+
+    .angleRight {
+        opacity: 0;
+        visibility: hidden;
+        left: 0;
+    }
+    
+    &:hover {
+        width: 170px;
+        
+        span {
+            right: 10px;
+        }
+        
+        .angleRight {
+            position: relative;
+            opacity: 1;
+            visibility: visible;
+            left: 10px;
+        }
+    }
 }
 
 .services {
@@ -644,8 +642,46 @@ main {
     }
 }
 
+.slogan {
+    height: 30vh;
+    background-color: $darkBlue2;
+    filter: brightness(150%);
+    color: white;
+    padding: 20px;
+    
+    .container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    h3 {
+        font-family: "cormorant garamond";
+        font-size: 2em;
+        font-weight: 100;
+    }
+
+    p, .mainButton {
+        font-family: header;
+        font-weight: 100;
+    }
+    
+    .mainButton {
+        background-color: white;
+        color: black;
+        font-weight: 400;
+        font-size: 16px;
+    }
+}
+
 .test {
     width: 100%;
     height: 500vh;
     background-color: red;
+    .mainButton {
+        background-color: blue;
+        color: white;
+    }
 }
