@@ -62,17 +62,17 @@ input[type="checkbox"] {
         }
 
         >li:nth-child(2) {
-            border-right: 1px darkslategrey solid;
-            border-left: 1px darkslategrey solid;
+            border-right: 1px gray solid;
+            border-left: 1px gray solid;
         }
-    }
 
-    .infoIcons a {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        // align-items: center;
-        justify-content: center;
+        a {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            // align-items: center;
+            justify-content: center;
+        }
     }
 
     .twitterIcon,
@@ -140,7 +140,7 @@ header {
             height: 100%;
             font-family: header;
             font-size: 13px;
-            font-weight: bold;
+            font-weight: 500;
             display: flex;
             align-items: center;
             cursor: pointer;
@@ -252,23 +252,22 @@ header {
                 position: relative;
                 transition: 0.8s;
 
-                &:hover, #searchCheck:checked {
+                &:hover,
+                #searchCheck:checked {
                     color: black;
                 }
 
-                
-                &:hover .searchBarBox
-                {
+
+                &:hover .searchBarBox {
                     color: white;
                 }
 
-                #searchCheck:checked ~ .searchBarBox {
+                #searchCheck:checked~.searchBarBox {
                     visibility: visible;
                     opacity: 1;
                 }
 
-                .searchIcon
-                {
+                .searchIcon {
                     cursor: pointer;
                     height: 100%;
                     display: flex;
@@ -291,8 +290,7 @@ header {
                     border: 1px lightgray solid;
                     box-shadow: 0 0 15px 1px black;
 
-                    .triangle
-                    {
+                    .triangle {
                         display: inline-block;
                         width: 40px;
                         height: 40px;
@@ -304,21 +302,18 @@ header {
                         right: 10px;
                     }
 
-                    .searchBar
-                    {
+                    .searchBar {
                         height: 50px;
                         width: 250px;
                         padding: 0 10px;
                         color: gray;
                     }
 
-                    input.searchBar
-                    {
+                    input.searchBar {
                         border: 1px lightgray solid;
                     }
 
-                    .searchButton
-                    {
+                    .searchButton {
                         width: 50px;
                         height: 50px;
                         background-color: $darkBlue;
@@ -328,8 +323,7 @@ header {
                         font-size: 20px;
                         transition: 0.8s;
 
-                        &:hover
-                        {
+                        &:hover {
                             filter: brightness(150%);
                         }
                     }
