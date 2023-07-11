@@ -5,6 +5,11 @@
     src: url("../../font/head.woff2");
 }
 
+@font-face {
+    font-family: 'cormorant garamond';
+    src: url("../../font/Cormorant_Garamond/CormorantGaramond-Light.ttf");
+}
+
 *,
 *::before,
 *::after {
@@ -44,7 +49,7 @@ input[type="checkbox"] {
     justify-content: center;
     align-items: center;
     gap: 15px;
-    transition: 1s;
+    transition: 0.5s;
 
     .cookieButtons {
         display: flex;
@@ -289,7 +294,7 @@ header {
                     padding: 10px;
                     background-color: $darkBlue;
                     color: white;
-                    border-radius: 2px;
+                    border-radius: 3px;
 
                 }
             }
@@ -384,8 +389,140 @@ header {
     }
 }
 
+main {
+    height: 100vh;
+    background: linear-gradient($blueGradiant, $blueGradiant), url("../../image/hero2-bw.png") no-repeat center center / cover;
+    text-transform: capitalize;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+
+    .container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .mainTitle {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .mainTitle p {
+        font-size: 1em;
+        font-family: header;
+    }
+
+    .mainTitle h2 {
+        font-size: 4em;
+        font-family: 'cormorant garamond';
+        font-weight: 100;
+    }
+
+    .mainInfo {
+        display: flex;
+        font-family: header;
+        font-weight: 100;
+        text-transform: none;
+
+        .infoBox {
+            padding: 50px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            h3 {
+                font-family: 'cormorant garamond';
+                font-size: calc(2em - 10px);
+                font-weight: 200;
+            }
+            
+            p {
+                font-size: calc(1em - 4px);
+            }
+    
+            .infoBoxButton {
+                height: 50px;
+                width: 150px;
+                border-radius: 50px;
+                align-self: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: calc(1em - 5px);
+                transition: 0.5s;
+                
+                .angleRight {
+                    opacity: 0;
+                    visibility: hidden;
+                }
+
+                span, .angleRight {
+                    position: relative;
+                    transition: 0.5s;
+                }
+
+                span {
+                    right: 0;
+                }
+
+                .angleRight {
+                    left: 0;
+                }
+                
+                &:hover {
+                    width: 170px;
+                    
+                    span {
+                        right: 10px;
+                    }
+                    
+                    .angleRight {
+                        opacity: 1;
+                        visibility: visible;
+                        left: 10px;
+                    }
+                }
+            }
+            
+            &:first-child {
+                background-color: white;
+                color: black;
+    
+                .infoBoxButton {
+                    background-color: $blue;
+                    color: white;
+                }
+            }
+        
+            &:nth-child(2) {
+                background-color: $blue;
+            }
+        
+            &:last-child {
+                background-color: $darkBlue2;
+            }
+    
+            &:nth-child(2), &:last-child {
+                .infoBoxButton {
+                    background-color: white;
+                    color: black
+                }
+            }
+
+        }
+    }
+    
+}
+
 .test {
-    background-color: red;
     width: 100%;
     height: 500vh;
+    background-color: red;
 }
