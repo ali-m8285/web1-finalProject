@@ -231,6 +231,7 @@ header {
     height: auto;
     position: sticky;
     top: 0;
+    opacity: 0.95;
     z-index: 99;
 
     .headerNav {
@@ -455,6 +456,16 @@ header {
         }
 
     }
+}
+
+.title {
+    height: 30vh;
+    background: linear-gradient($blueGradiant, $blueGradiant), url("./../../image/hero-blurred.jpg") no-repeat center center / cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 3em;
 }
 
 .test {
