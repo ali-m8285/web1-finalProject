@@ -2,12 +2,12 @@
 
 @font-face {
     font-family: soft;
-    src: url("../../font/head.woff2");
+    src: url("./../../font/head.woff2");
 }
 
 @font-face {
     font-family: 'cormorant garamond';
-    src: url("../../font/Cormorant_Garamond/CormorantGaramond-Light.ttf");
+    src: url("./../../font/Cormorant_Garamond/CormorantGaramond-Light.ttf");
 }
 
 *,
@@ -503,7 +503,7 @@ header {
 
 main {
     height: 100vh;
-    background: linear-gradient($blueGradiant, $blueGradiant), url("../../image/hero2-bw.png") no-repeat center center / cover;
+    background: linear-gradient($blueGradiant, $blueGradiant), url("./../../image/hero2-bw.png") no-repeat center center / cover;
     text-transform: capitalize;
     color: white;
     text-align: center;
@@ -724,27 +724,27 @@ main {
             }
 
             .finance {
-                background: url("../../icon/finance.png") no-repeat center center / contain;
+                background: url("./../../icon/finance.png") no-repeat center center / contain;
             }
 
             .bank {
-                background: url("../../icon/bank.png") no-repeat center center / contain;
+                background: url("./../../icon/bank.png") no-repeat center center / contain;
             }
             
             .wallet {
-                background: url("../../icon/wallet.png") no-repeat center center / contain;
+                background: url("./../../icon/wallet.png") no-repeat center center / contain;
             }
             
             .car {
-                background: url("../../icon/car.png") no-repeat center center / contain;
+                background: url("./../../icon/car.png") no-repeat center center / contain;
             }
             
             .justice {
-                background: url("../../icon/justice.png") no-repeat center center / contain;
+                background: url("./../../icon/justice.png") no-repeat center center / contain;
             }
             
             .jury {
-                background: url("../../icon/jury.png") no-repeat center center / contain;
+                background: url("./../../icon/jury.png") no-repeat center center / contain;
             }
 
             h3 {
