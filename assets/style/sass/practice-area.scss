@@ -147,6 +147,42 @@ p {
     }
 }
 
+.titleCard {
+    background: linear-gradient(0.6turn, $blue , $darkBlue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    color: white;
+    padding: 30px;
+
+    .mainButton {
+        background-color: white;
+        color: black;
+        font-size: 14px;
+    }
+
+    h3 {
+        margin: 0;
+        font-size: calc(2em - 2px);
+    }
+
+    p {
+        font-weight: 400;
+        line-height: calc(2em - 5px);
+    }
+}
+
+.infoCard {
+    background-color: $cardBackground;
+}
+
+.icon {
+    width: 100px;
+    height: 100px;
+}
+
 // ******************************************************************
 
 .info {
@@ -468,43 +504,201 @@ header {
     font-size: 3em;
 }
 
-.test {
-    height: 200vh;
-    background-color: red;
+main {
+    .container {
+        height: 50vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .right,
+    .left {
+        width: 45%;
+    }
+
+    h3 {
+        font-size: 2em;
+    }
+
+    p {
+        letter-spacing: 0;
+        font-weight: 500;
+    }
+
+    span {
+        color: $lightBlue;
+    }
+}
+
+.detail {
+    height: 400vh;
+    padding: 100px 0;
+    text-align: center;
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 100px;
+        grid-template-areas: "bank bankInfo bankInfo"
+            "financeInfo financeInfo finance"
+            "wallet walletInfo walletInfo";
+    }
+
+    .bank {
+        grid-area: bank;
+
+        .bankIcon {
+            background: url("./../../icon/bank.png") no-repeat center center / contain;
+        }
+    }
+
+    .bankInfo {
+        grid-area: bankInfo;
+    }
+
+    .finance {
+        grid-area: finance;
+
+        .financeIcon {
+            background: url("./../../icon/finance.png") no-repeat center center / contain;
+        }
+    }
+
+    .financeInfo {
+        grid-area: financeInfo;
+    }
+
+    .wallet {
+        grid-area: wallet;
+
+        .walletIcon {
+            background: url("./../../icon/wallet.png") no-repeat center center / contain;
+        }
+    }
+
+    .walletInfo {
+        grid-area: walletInfo;
+    }
+}
+
+.slogan {
+    height: 30vh;
+    background: linear-gradient(to left, $darkBlue , $darkBlue2);
+    filter: brightness(130%);
+    color: white;
+    padding: 20px;
+    text-align: center;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    h3 {
+        font-size: calc(2em - 5px);
+        font-weight: 100;
+        margin-bottom: 10px;
+    }
+
+    p,
+    .mainButton {
+        font-weight: 400;
+        letter-spacing: 0;
+    }
+
+    .mainButton {
+        background-color: white;
+        color: black;
+        font-weight: 400;
+        font-size: 16px;
+    }
+}
+
+.detail2 {
+    border-bottom: 1px white solid;
+
+    .container {
+        grid-template-areas: "justice justiceInfo justiceInfo"
+            "carInfo carInfo car"
+            "jury juryInfo juryInfo";
+    }
+
+    .justice {
+        grid-area: justice;
+
+        .justiceIcon {
+            background: url("./../../icon/justice.png") no-repeat center center / contain;
+        }
+
+    }
+
+    .justiceInfo {
+        grid-area: justiceInfo;
+    }
+
+    .car {
+        grid-area: car;
+
+        .carIcon {
+            background: url("./../../icon/car.png") no-repeat center center / contain;
+        }
+    }
+
+    .carInfo {
+        grid-area: carInfo;
+    }
+
+    .jury {
+        grid-area: jury;
+
+        .juryIcon {
+            background: url("./../../icon/jury.png") no-repeat center center / contain;
+        }
+    }
+
+    .juryInfo {
+        grid-area: juryInfo;
+    }
 }
 
 footer {
     height: 150vh;
     text-align: center;
     color: darkgray;
-    
+
     p {
         letter-spacing: 0;
         font-weight: 400;
     }
 
-    
+
     .container {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 2fr 20px 3fr 20px 1fr;
     }
-    
-    .footerTitle, .footerDetail, .footerBottom {
+
+    .footerTitle,
+    .footerDetail,
+    .footerBottom {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    
+
     .footerTitle {
         h2 {
             color: black;
             font-size: 3em;
         }
     }
-    
-    
+
+
     .footerDetail {
         h4 {
             color: $blue;
@@ -612,8 +806,9 @@ footer {
             }
         }
     }
-    
-    .footerDetail  h4, .footerBottom {
+
+    .footerDetail h4,
+    .footerBottom {
         font-family: soft;
         font-size: 12px;
     }
@@ -622,8 +817,7 @@ footer {
         color: $blue;
         text-transform: capitalize;
 
-        .links 
-        {
+        .links {
             width: 100%;
             display: flex;
             justify-content: center;
