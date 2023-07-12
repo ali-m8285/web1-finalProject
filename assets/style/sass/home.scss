@@ -655,6 +655,7 @@ main {
     filter: brightness(150%);
     color: white;
     padding: 20px;
+    text-align: center;
     
     .container {
         height: 100%;
@@ -667,10 +668,12 @@ main {
     h3 {
         font-size: calc(2em - 5px);
         font-weight: 100;
+        margin-bottom: 10px;
     }
-
+    
     p, .mainButton {
         font-weight: 400;
+        letter-spacing: 0;
     }
     
     .mainButton {
@@ -682,20 +685,23 @@ main {
 }
 
 .area {
-    height: 150vh;
+    height: 170vh;
 
     .container {
         height: 100%;
         display: grid;
-        grid-template-rows: 2fr 20px 10fr;
+        grid-template-rows: 400px 20px 1fr;
         grid-template-columns: 1fr;
     }
 
     .areaTitle {
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
         h2 {
-            font-size: 5em;
+            font-size: 3em;
         }
     }
 
