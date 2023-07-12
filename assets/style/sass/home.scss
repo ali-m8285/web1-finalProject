@@ -651,8 +651,8 @@ main {
 
 .slogan {
     height: 30vh;
-    background-color: $darkBlue2;
-    filter: brightness(150%);
+    background: linear-gradient(to left, $darkBlue , $darkBlue2);
+    filter: brightness(130%);
     color: white;
     padding: 20px;
     text-align: center;
@@ -690,7 +690,7 @@ main {
     .container {
         height: 100%;
         display: grid;
-        grid-template-rows: 400px 20px 1fr;
+        grid-template-rows: 300px 20px 1fr;
         grid-template-columns: 1fr;
     }
 
@@ -767,6 +767,24 @@ main {
 
         .infoBox:nth-child(2n -1) {
             background-color: $darkBlue2;
+        }
+    }
+}
+
+.slogan2.slogan {
+    height: 20vh;
+    
+    .container {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    span.number {
+        font-size: 3em;
+
+        span.symbol {
+            opacity: 0.35;
+            filter: brightness(150%);
         }
     }
 }
