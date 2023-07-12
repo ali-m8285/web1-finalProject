@@ -1,7 +1,7 @@
 @import "_var";
 
 @font-face {
-    font-family: header;
+    font-family: soft;
     src: url("../../font/head.woff2");
 }
 
@@ -23,10 +23,7 @@
     color: white;
 }
 
-.container {
-    max-width: 88%;
-    margin: 0 auto;
-}
+// global items ********************************************************
 
 ul {
     list-style: none;
@@ -41,7 +38,25 @@ input[type="checkbox"] {
     display: none;
 }
 
+h1, h2, h3 {
+    font-family: "cormorant garamond";
+    font-weight: 200;
+    margin: 20px 0;
+}
+
+p {
+    font-family: soft;
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+// ******************************************************************
+
 // usable items ********************************************************
+.container {
+    max-width: 88%;
+    margin: 0 auto;
+}
+
 .mainButton {
     height: 50px;
     width: 150px;
@@ -50,6 +65,7 @@ input[type="checkbox"] {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: soft;
     font-size: calc(1em - 5px);
     transition: 0.5s;
     
@@ -91,18 +107,10 @@ input[type="checkbox"] {
     flex-direction: column;
     justify-content: space-around;
 
-    h3 {
-        font-family: 'cormorant garamond';
-        font-size: calc(2em - 10px);
-        font-weight: 200;
-    }
-    
     p {
         font-size: calc(1em - 4px);
     }
-
 }
-
 
 .seprate {
     display: flex;
@@ -143,7 +151,6 @@ input[type="checkbox"] {
     bottom: 0;
     background-color: $darkBlue;
     color: white;
-    font-family: header;
     font-size: 13px;
     display: flex;
     justify-content: center;
@@ -189,8 +196,6 @@ input[type="checkbox"] {
     background-color: $darkBlue;
     height: 30px;
     color: white;
-    font-size: 15px;
-    font-family: header;
 
     >.container {
         display: flex;
@@ -208,14 +213,16 @@ input[type="checkbox"] {
         height: 100%;
         display: flex;
         margin-left: 10px;
+        font-size: 15px;
 
-        >li {
+
+        > li {
             display: block;
             height: 100%;
             width: 30px;
         }
 
-        >li:nth-child(2) {
+        > li:nth-child(2) {
             border-right: 1px gray solid;
             border-left: 1px gray solid;
         }
@@ -293,7 +300,7 @@ header {
         .navRight {
             height: 100%;
             font-family: header;
-            font-size: 13px;
+            font-size: 15px;
             font-weight: 500;
             display: flex;
             align-items: center;
@@ -343,14 +350,14 @@ header {
                     &:hover {
                         color: black;
 
-                        .aboutList {
+                        .aboutDropdown {
                             border-top: 2px $darkBlue solid;
                             opacity: 1;
                             visibility: visible;
                         }
                     }
 
-                    .aboutList {
+                    .aboutDropdown {
                         background-color: white;
                         width: 200px;
                         height: 100px;
@@ -361,13 +368,14 @@ header {
                         opacity: 0;
                         visibility: hidden;
                         transition: 0.8s;
+                        box-shadow: 0 0 10px 1px darkgray;
 
-                        .aboutUL {
+                        .dropdownList {
                             padding: 0 10px;
                             display: flex;
                             flex-direction: column;
     
-                            .aboutLI {
+                            .dropdownItem {
                                 text-transform: capitalize;
                                 width: 100%;
                                 height: 50%;
@@ -375,7 +383,7 @@ header {
                                 align-items: center;
                             }
     
-                            .aboutLI:hover .aboutLink {
+                            .dropdownItem:hover .dropdownLink {
                                 color: black;
                             }
                         }
@@ -516,23 +524,24 @@ main {
     
         p {
             font-size: 1em;
-            font-family: header;
         }
     
         h2 {
             font-size: 4em;
-            font-family: 'cormorant garamond';
             font-weight: 100;
         }
     }
 
     .mainInfo {
         display: flex;
-        font-family: header;
         font-weight: 100;
         text-transform: none;
 
         .infoBox {
+            h3 {
+                font-size: calc(2em - 10px);
+            }
+
             &:first-child {
                 background-color: white;
                 color: black;
@@ -566,15 +575,7 @@ main {
     height: 150vh;
     width: 100%;
 
-    h2, h3 {
-        font-family: "cormorant garamond";
-        font-weight: 200;
-        margin: 20px 0;
-    }
-
     p {
-        font-family: header;
-        font-weight: 100;
         letter-spacing: 1px;
     }
 
@@ -623,7 +624,6 @@ main {
             }
 
             p {
-                font-family: header;
                 font-weight: 300;
                 letter-spacing: 1px;
             }
@@ -665,13 +665,11 @@ main {
     }
     
     h3 {
-        font-family: "cormorant garamond";
         font-size: calc(2em - 5px);
         font-weight: 100;
     }
 
     p, .mainButton {
-        font-family: header;
         font-weight: 400;
     }
     
@@ -689,20 +687,16 @@ main {
     .container {
         height: 100%;
         display: grid;
-        grid-template-rows: 1fr 20px 4fr;
+        grid-template-rows: 2fr 20px 10fr;
         grid-template-columns: 1fr;
     }
 
-    h2, h3 {
-        font-family: "cormorant garamond";
-        font-weight: 200;
-        margin: 20px 0;
-    }
+    .areaTitle {
+        text-align: center;
 
-    p {
-        font-family: header;
-        font-weight: 100;
-        letter-spacing: 1px;
+        h2 {
+            font-size: 5em;
+        }
     }
 
     .areaDetails {
@@ -739,6 +733,14 @@ main {
             
             .car {
                 background: url("../../icon/car.png") no-repeat center center / contain;
+            }
+            
+            .justice {
+                background: url("../../icon/justice.png") no-repeat center center / contain;
+            }
+            
+            .jury {
+                background: url("../../icon/jury.png") no-repeat center center / contain;
             }
 
             h3 {
