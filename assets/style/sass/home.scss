@@ -299,9 +299,9 @@ header {
 
         .navRight {
             height: 100%;
-            font-family: header;
-            font-size: 15px;
-            font-weight: 500;
+            font-family: soft;
+            font-size: 13px;
+            font-weight: 600;
             display: flex;
             align-items: center;
             cursor: pointer;
@@ -341,7 +341,7 @@ header {
                 }
 
                 .navRightItem:last-child a {
-                    border-right: 2px transparent solid;
+                    border: none
                 }
 
                 .about {
@@ -442,17 +442,16 @@ header {
                 .searchBarBox {
                     position: absolute;
                     top: calc(100% + 20px);
-                    right: 0;
-                    width: 400px;
-                    height: 100px;
+                    right: -15px;
+                    width: 320px;
+                    height: 80px;
                     background-color: white;
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     opacity: 0;
                     visibility: hidden;
-                    border: 1px lightgray solid;
-                    box-shadow: 0 0 15px 1px black;
+                    box-shadow: 0 0 10px 2px  rgba(0, 0, 0, 0.2);
 
                     &::after {
                         content: "";
@@ -466,16 +465,19 @@ header {
                         bottom: 100%;
                         right: 10px;
                     }
-
-                    .searchBar {
-                        height: 50px;
-                        width: 250px;
-                        padding: 0 10px;
-                        color: gray;
-                    }
-
+                    
                     input.searchBar {
-                        border: 1px lightgray solid;
+                        height: 49px;
+                        width: 250px;
+                        color: rgba(0, 0, 0, 0.3);
+                        padding: 0 10px;
+                        border: 1px rgba(0, 0, 0, 0.1) solid;
+                        background-color: $searchBar;
+                        font-size: 18px;
+
+                        &:focus {
+                            outline: none;
+                        }
                     }
 
                     .searchButton {
@@ -840,6 +842,59 @@ footer {
                 border-radius: 50%;
                 background-color: $darkBlue !important;
                 background-size: 18px !important;
+                transition: 0.2s;
+                position: relative;
+
+                &:hover {
+                    filter: brightness(120%);
+
+                    &::after {
+                        visibility: visible;
+                        opacity: 0.8;
+                        bottom: calc(100% + 20px);
+                    }
+
+                    &::before {
+                        visibility: visible;
+                        opacity: 0.8;
+                        top: -20px;
+                    }
+                }
+
+                &::after {
+                    content: "Follow me on " attr(data-platform);
+                    width: 150px;
+                    height: 70px;
+                    background-color: black;
+                    font-family: soft;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                    bottom: calc(100% + 50px);
+                    left: 50%;
+                    transform: translate(-50%, 0);
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: 0.2s;
+                }
+
+                &::before {
+                    content: "";
+                    width: 20px;
+                    height: 20px;
+                    display: block;
+                    position: absolute;
+                    top: -50px;
+                    left: 50%;
+                    transform: translate(-50%, 0);
+                    border-top: 10px black solid;
+                    border-right: 10px transparent solid;
+                    border-left: 10px transparent solid;
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: 0.2s;
+                }
             }
 
             .twitter {
@@ -864,6 +919,10 @@ footer {
 
             .gmail {
                 background: url("./../../icon/mail.png") no-repeat center center / contain;
+
+                &::after {
+                    content: "Get in touch"
+                }
             }
         }
     }
