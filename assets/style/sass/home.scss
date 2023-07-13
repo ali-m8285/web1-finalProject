@@ -998,12 +998,8 @@ footer {
         height: 400px;
     }
 
-    .moveToTop {
+    .moveToTop, .cookie {
         display: none !important;
-    }
-
-    * {
-        overflow-x: hidden;
     }
 
     .info {
@@ -1018,14 +1014,83 @@ footer {
 
     header {
         .headerNav {
+            height: 100px;
+            .navLeft {
+                .logo {
+                    width: 200px;
+                }
+            }
+
             .navRight {
-                display: none;
+                flex-direction: row-reverse;
+                
+                .menuOpen {
+                    width: 20px;
+                    height: 20px;
+                    display: block;
+                    background: url("./../../icon/menu.png") no-repeat center center / contain;
+                }
+
+                .menuClose {
+                    width: 20px;
+                    height: 20px;
+                    background: url("./../../icon/close.png") no-repeat center center / contain;
+                    display: none;
+                }
+
+                #burgerCheck:checked +  .navRightList{
+                    display: block;
+                    background-color: gray;
+                    height: 100vh;
+                }
+                
+                .navRightList {
+                    height: 100vh;
+                    width: 90%;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 50px;
+                    background-color: gray;
+                    color: black;
+                    padding: 100px 0 0 20px;
+
+                    .navRightItem {
+                        width: 100%;
+                        height: auto;
+                    }
+
+                    .navRightLink {
+                        padding: 0;
+                        justify-content: flex-start;
+                    }
+
+                    .about {
+                        height: 200px;
+                        .aboutDropdown {
+                            opacity: 1;
+                            visibility: visible;
+                            // background-color: transparent;
+                            height: auto;
+                            width: 100%;
+                            position: relative;
+                            box-shadow: none;
+                            padding: 0 0 0 20px;
+                        }
+                    }
+                    
+                    .navRightItem:first-child, .navRightLink {
+                        border: none;
+                    }
+                }
             }
         }
     }
 
     main {
-        height: 200vh;
+        height: 220vh;
 
         .mainTitle {
             p {
@@ -1048,7 +1113,7 @@ footer {
         height: auto;
 
         .container {
-            grid-template-rows: 60vh 1fr 160vh 1fr 100vh;
+            grid-template-rows: 60vh 100px 160vh 100px 100vh;
         }
 
         .serviceTitle {
@@ -1081,7 +1146,7 @@ footer {
         height: auto;
 
         .container {
-            grid-template-rows: 60vh 200px 1fr;
+            grid-template-rows: 60vh 100px 1fr;
         }
 
         .areaDetails {
