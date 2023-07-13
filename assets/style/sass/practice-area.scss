@@ -368,7 +368,7 @@ header {
                 }
 
                 .navRightItem:hover:not(.about),
-                .navRightItem:nth-child(2) {
+                .navRightItem:first-child {
                     border-bottom: 2px $darkBlue solid;
                     color: black;
                 }
@@ -410,13 +410,13 @@ header {
                         opacity: 0;
                         visibility: hidden;
                         transition: 0.8s;
-                        box-shadow: 0 0 10px 1px darkgray;
+                        box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.5);
 
                         .dropdownList {
                             padding: 0 10px;
                             display: flex;
                             flex-direction: column;
-
+    
                             .dropdownItem {
                                 text-transform: capitalize;
                                 width: 100%;
@@ -424,7 +424,7 @@ header {
                                 display: flex;
                                 align-items: center;
                             }
-
+    
                             .dropdownItem:hover .dropdownLink {
                                 color: black;
                             }
@@ -471,6 +471,7 @@ header {
                 #searchCheck:checked~.searchBarBox {
                     visibility: visible;
                     opacity: 1;
+                    transform: scale(1);
                 }
 
                 .searchIcon {
@@ -483,8 +484,8 @@ header {
 
                 .searchBarBox {
                     position: absolute;
-                    top: calc(100% + 20px);
-                    right: -15px;
+                    top: 90%;
+                    right: -5px;
                     width: 320px;
                     height: 80px;
                     background-color: white;
@@ -493,21 +494,22 @@ header {
                     justify-content: center;
                     opacity: 0;
                     visibility: hidden;
-                    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+                    transform: scale(0.5);
+                    box-shadow: 0 0 15px 0  rgba(0, 0, 0, 0.5);
+                    transition: 0.3s;
 
                     &::after {
                         content: "";
                         display: inline-block;
-                        width: 40px;
-                        height: 40px;
-                        border-right: 20px transparent solid;
-                        border-left: 20px transparent solid;
-                        border-bottom: 20px white solid;
+                        width: 20px;
+                        border-right: 10px transparent solid;
+                        border-left: 10px transparent solid;
+                        border-bottom: 10px white solid;
                         position: absolute;
                         bottom: 100%;
                         right: 10px;
                     }
-
+                    
                     input.searchBar {
                         height: 49px;
                         width: 250px;
