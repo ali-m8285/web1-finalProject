@@ -120,6 +120,7 @@ p {
 .seprate {
     display: flex;
     justify-content: center;
+    align-items: center;
     font-size: 1em;
 
     .icon {
@@ -172,16 +173,67 @@ p {
         font-weight: 400;
         line-height: calc(2em - 5px);
     }
+
+    .titleIcon {
+        width: 100px;
+        height: 100px;
+    }
 }
 
 .infoCard {
     background-color: $cardBackground;
+    text-align: left;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.5fr auto;
+
+    ul {
+        list-style-type: disc;
+        list-style-position: inside;
+        font-family: soft;
+
+        li {
+            margin: 10px 0;
+        }
+    }
+
+    h3 {
+        font-size: 2em;
+    }
+
+    p, ul {
+        font-weight: 300;
+        letter-spacing: 0;
+        font-size: calc(1em + 1px);
+    }
+
+    span {
+        color: $blue;
+        font-weight: 500;
+    }
+
+    .top, .bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .bottom {
+        gap: 20px;
+    }
+    
+    .note {
+        padding-left: 20px;
+        border-left: 5px $blue solid;
+        font-size: 20px;
+        font-weight: bold;
+        margin: 30px 0;
+        color: gray;
+    }
 }
 
-.icon {
-    width: 100px;
-    height: 100px;
-}
+
 
 // ******************************************************************
 
@@ -319,7 +371,7 @@ header {
                 }
 
                 .navRightItem:hover:not(.about),
-                .navRightItem:first-child {
+                .navRightItem:nth-child(2) {
                     border-bottom: 2px $darkBlue solid;
                     color: black;
                 }
@@ -532,7 +584,6 @@ main {
 }
 
 .detail {
-    height: 400vh;
     padding: 100px 0;
     text-align: center;
 
