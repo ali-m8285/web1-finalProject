@@ -1048,17 +1048,24 @@ footer {
         .serviceDetail, .detailMore {
             flex-direction: column;
             justify-content: space-around;
-            
+
             .detail {
                 width: 100%;
                 height: auto;
             }
-            
+
             .more {
                 width: 100%;
                 height: auto;
             }
         }   
+    }
+
+    .slogan2 {
+        padding: 0;
+        .container {
+            flex-direction: column;
+        }
     }
 
     .slogan {
