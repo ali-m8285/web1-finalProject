@@ -520,8 +520,6 @@ main {
     }
 
     .mainTitle {
-        width: 100%;
-        height: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -538,6 +536,7 @@ main {
     }
 
     .mainInfo {
+        margin: 50px 0 0 0;
         display: flex;
         font-weight: 100;
         text-transform: none;
@@ -980,4 +979,57 @@ footer {
         align-items: center;
         transform: rotate(-90deg);
     }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+    }
+
+    .infoBox {
+        height: 400px;
+    }
+
+    * {
+        overflow-x: hidden;
+    }
+
+    .info {
+        .container {
+            justify-content: center;
+        }
+        .infoIcons {
+            display: none;
+        }
+    }
+
+    header {
+        .headerNav {
+            .navRight {
+                display: none;
+            }
+        }
+    }
+    
+    main {
+        height: 220vh;
+        
+        .mainTitle {
+            p {
+                font-weight: 500;
+                font-size: 25px;
+            }
+            
+            h2 {
+                font-size: 1em;
+            }
+        }
+
+        .mainInfo {
+            flex-direction: column;
+             gap: 20px;
+        }
+    }
+    
+    
 }

@@ -907,3 +907,18 @@ footer {
         transform: rotate(-90deg);
     }
 }
+
+// small screen and tablet portrait view
+@media (min-width: 769px) and (max-width: 1024) {
+    
+}
+
+// tablet view
+@media (min-width: 481px) and (max-width: 768px) {
+    
+}
+
+// mobile view
+@media (max-width: 480px) {
+    
+}
