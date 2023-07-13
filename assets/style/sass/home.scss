@@ -1025,7 +1025,7 @@ footer {
     }
 
     main {
-        height: 220vh;
+        height: 200vh;
 
         .mainTitle {
             p {
@@ -1081,7 +1081,7 @@ footer {
         height: auto;
 
         .container {
-            grid-template-rows: 60vh 100px 1fr;
+            grid-template-rows: 60vh 200px 1fr;
         }
 
         .areaDetails {
@@ -1104,6 +1104,22 @@ footer {
 
         span.number {
             font-size: 2em;
+        }
+    }
+
+    footer {
+        height: auto;
+
+        .container {
+            grid-template-rows: auto 100px auto 100px auto;
+        }
+
+        .footerDetail {
+            .fdSocial {
+                justify-content: center;
+                flex-wrap: wrap;
+                padding: 0 20px;
+            }
         }
     }
 }
