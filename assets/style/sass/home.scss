@@ -577,11 +577,6 @@ main {
 
 .services {
     height: 150vh;
-    width: 100%;
-
-    p {
-        letter-spacing: 1px;
-    }
 
     span {
         color: $darkBlue;
@@ -986,8 +981,16 @@ footer {
         width: 100%;
     }
 
+    p {
+        font-size: 20px;
+    }
+
     .infoBox {
         height: 400px;
+    }
+
+    .moveToTop {
+        display: none !important;
     }
 
     * {
@@ -1030,6 +1033,31 @@ footer {
              gap: 20px;
         }
     }
-    
-    
+
+    .services {
+        height: 380vh;
+        
+        .container {
+            grid-template-rows: 80vh 100px 150vh 100px 100vh;
+        }
+        
+        .serviceTitle {
+            width: 100%;
+        }
+
+        .serviceDetail, .detailMore {
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+
+            .detail, .more {
+                width: 100%;
+                height: 70vh;
+            }
+        }
+    }
+
+    .slogan {
+        height: 60vh;
+    }
 }
