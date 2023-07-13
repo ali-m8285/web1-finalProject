@@ -38,7 +38,9 @@ input[type="checkbox"] {
     display: none;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: "cormorant garamond";
     font-weight: 200;
     margin: 20px 0;
@@ -49,6 +51,7 @@ p {
     font-weight: 100;
     letter-spacing: 1px;
 }
+
 // ******************************************************************
 
 // usable items ********************************************************
@@ -69,8 +72,9 @@ p {
     font-family: soft;
     font-size: calc(1em - 5px);
     transition: 0.5s;
-    
-    span, .angleRight {
+
+    span,
+    .angleRight {
         position: relative;
         transition: 0.5s;
     }
@@ -84,14 +88,14 @@ p {
         visibility: hidden;
         left: 0;
     }
-    
+
     &:hover {
         width: 170px;
-        
+
         span {
             right: 10px;
         }
-        
+
         .angleRight {
             position: relative;
             opacity: 1;
@@ -124,7 +128,8 @@ p {
         color: gray;
     }
 
-    .icon::before, .icon::after {
+    .icon::before,
+    .icon::after {
         content: "";
         display: block;
         width: 50px;
@@ -137,11 +142,12 @@ p {
     .icon::before {
         right: calc(100% + 10px);
     }
-    
+
     .icon::after {
         left: calc(100% + 10px);
     }
 }
+
 // ******************************************************************
 
 
@@ -217,13 +223,13 @@ p {
         font-size: 15px;
 
 
-        > li {
+        >li {
             display: block;
             height: 100%;
             width: 30px;
         }
 
-        > li:nth-child(2) {
+        >li:nth-child(2) {
             border-right: 1px gray solid;
             border-left: 1px gray solid;
         }
@@ -376,7 +382,7 @@ header {
                             padding: 0 10px;
                             display: flex;
                             flex-direction: column;
-    
+
                             .dropdownItem {
                                 text-transform: capitalize;
                                 width: 100%;
@@ -384,7 +390,7 @@ header {
                                 display: flex;
                                 align-items: center;
                             }
-    
+
                             .dropdownItem:hover .dropdownLink {
                                 color: black;
                             }
@@ -455,7 +461,7 @@ header {
                     opacity: 0;
                     visibility: hidden;
                     transform: scale(0.5);
-                    box-shadow: 0 0 15px 0  rgba(0, 0, 0, 0.5);
+                    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
                     transition: 0.3s;
 
                     &::after {
@@ -469,7 +475,7 @@ header {
                         bottom: 100%;
                         right: 10px;
                     }
-                    
+
                     input.searchBar {
                         height: 49px;
                         width: 250px;
@@ -524,11 +530,11 @@ main {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-    
+
         p {
             font-size: 1em;
         }
-    
+
         h2 {
             font-size: 4em;
             font-weight: 100;
@@ -549,22 +555,23 @@ main {
             &:first-child {
                 background-color: white;
                 color: black;
-        
+
                 .mainButton {
                     background-color: $blue;
                     color: white;
                 }
             }
-        
+
             &:nth-child(2) {
                 background-color: $blue;
             }
-        
+
             &:last-child {
                 background-color: $darkBlue2;
             }
-        
-            &:nth-child(2), &:last-child {
+
+            &:nth-child(2),
+            &:last-child {
                 .mainButton {
                     background-color: white;
                     color: black
@@ -572,7 +579,6 @@ main {
             }
         }
     }
-    
 }
 
 .services {
@@ -582,13 +588,13 @@ main {
         color: $darkBlue;
         font-weight: 700;
     }
-    
+
     .container {
         display: grid;
         grid-template-rows: repeat(3, 1fr 20px);
         grid-template-columns: 1fr;
     }
-    
+
     .serviceTitle {
         width: 50%;
         text-align: center;
@@ -596,7 +602,7 @@ main {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        
+
         h2 {
             font-size: 3em;
         }
@@ -654,25 +660,26 @@ main {
     color: white;
     padding: 20px;
     text-align: center;
-    
+
     .container {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
     }
-    
+
     h3 {
         font-size: calc(2em - 5px);
         font-weight: 100;
         margin-bottom: 10px;
     }
-    
-    p, .mainButton {
+
+    p,
+    .mainButton {
         font-weight: 400;
         letter-spacing: 0;
     }
-    
+
     .mainButton {
         background-color: white;
         color: black;
@@ -728,19 +735,19 @@ main {
             .bank {
                 background: url("./../../icon/bank.png") no-repeat center center / contain;
             }
-            
+
             .wallet {
                 background: url("./../../icon/wallet.png") no-repeat center center / contain;
             }
-            
+
             .car {
                 background: url("./../../icon/car.png") no-repeat center center / contain;
             }
-            
+
             .justice {
                 background: url("./../../icon/justice.png") no-repeat center center / contain;
             }
-            
+
             .jury {
                 background: url("./../../icon/jury.png") no-repeat center center / contain;
             }
@@ -769,7 +776,7 @@ main {
 
 .slogan2 {
     height: 20vh;
-    
+
     .container {
         flex-direction: row;
         gap: 10px;
@@ -789,34 +796,36 @@ footer {
     height: 150vh;
     text-align: center;
     color: darkgray;
-    
+
     p {
         letter-spacing: 0;
         font-weight: 400;
     }
 
-    
+
     .container {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 2fr 20px 3fr 20px 1fr;
     }
-    
-    .footerTitle, .footerDetail, .footerBottom {
+
+    .footerTitle,
+    .footerDetail,
+    .footerBottom {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    
+
     .footerTitle {
         h2 {
             color: black;
             font-size: 3em;
         }
     }
-    
-    
+
+
     .footerDetail {
         h4 {
             color: $blue;
@@ -924,8 +933,9 @@ footer {
             }
         }
     }
-    
-    .footerDetail  h4, .footerBottom {
+
+    .footerDetail h4,
+    .footerBottom {
         font-family: soft;
         font-size: 12px;
     }
@@ -934,8 +944,7 @@ footer {
         color: $blue;
         text-transform: capitalize;
 
-        .links 
-        {
+        .links {
             width: 100%;
             display: flex;
             justify-content: center;
@@ -1001,6 +1010,7 @@ footer {
         .container {
             justify-content: center;
         }
+
         .infoIcons {
             display: none;
         }
@@ -1013,16 +1023,16 @@ footer {
             }
         }
     }
-    
+
     main {
         height: 220vh;
-        
+
         .mainTitle {
             p {
                 font-weight: 500;
                 font-size: 25px;
             }
-            
+
             h2 {
                 font-size: 1em;
             }
@@ -1030,45 +1040,70 @@ footer {
 
         .mainInfo {
             flex-direction: column;
-             gap: 20px;
+            gap: 20px;
         }
     }
 
     .services {
-        height: 310vh;
-        
+        height: auto;
+
         .container {
-            grid-template-rows: 60vh 100px 150vh 100px auto;
+            grid-template-rows: 60vh 1fr 160vh 1fr 100vh;
         }
-        
+
         .serviceTitle {
             width: 100%;
         }
 
-        .serviceDetail, .detailMore {
+        .serviceDetail,
+        .detailMore {
             flex-direction: column;
-            justify-content: space-around;
+            justify-content: space-evenly;
 
-            .detail {
+            .detail, .more {
                 width: 100%;
                 height: auto;
             }
 
             .more {
-                width: 100%;
-                height: auto;
+                h3 {
+                    margin-top: 0;
+                }
             }
-        }   
-    }
-
-    .slogan2 {
-        padding: 0;
-        .container {
-            flex-direction: column;
         }
     }
 
     .slogan {
         height: 60vh;
+    }
+
+    .area {
+        height: auto;
+
+        .container {
+            grid-template-rows: 60vh 100px 1fr;
+        }
+
+        .areaDetails {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(6, 1fr);
+
+            .infoBox {
+                height: auto;
+                gap: 50px;
+            }
+        }
+    }
+
+    .slogan2 {
+        height: 80vh;
+
+        .container {
+            flex-direction: column;
+        }
+
+        span.number {
+            font-size: 2em;
+        }
     }
 }
