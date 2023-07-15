@@ -111,9 +111,16 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    transition: 0.5s;
 
     p {
         font-size: calc(1em - 4px);
+    }
+
+    &:hover {
+        transform: scale(1.02);
+        box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.6);
+        z-index: 3;
     }
 }
 
@@ -279,7 +286,6 @@ p {
 }
 
 header {
-    height: auto;
     position: sticky;
     top: 0;
     opacity: 0.95;
@@ -329,7 +335,7 @@ header {
                     transition: 0.8s;
                 }
 
-                .navRightItem:last-child {
+                .navRightItem:nth-last-child(2) {
                     text-transform: uppercase;
                 }
 
@@ -339,6 +345,11 @@ header {
                     color: black;
                 }
 
+                .navRightItem:nth-last-child(2) a {
+                    border: none
+                }
+
+
                 .navRightLink {
                     display: flex;
                     justify-content: center;
@@ -347,11 +358,7 @@ header {
                     border-right: 2px $silver solid;
                     padding: 0 20px;
                 }
-
-                .navRightItem:last-child a {
-                    border: none
-                }
-
+                
                 .about {
                     position: relative;
 
