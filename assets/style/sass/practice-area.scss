@@ -363,7 +363,7 @@ header {
                     text-transform: uppercase;
                 }
 
-                .navRightItem:hover:not(.about),
+                .navRightItem:hover,
                 .navRightItem:first-child {
                     border-bottom: 2px $darkBlue solid;
                     color: black;
@@ -388,6 +388,7 @@ header {
 
                     &:hover {
                         color: black;
+                        border-bottom-color: transparent;
 
                         .aboutDropdown {
                             border-top: 2px $darkBlue solid;
@@ -572,7 +573,6 @@ main {
 
     p {
         letter-spacing: 0;
-        font-weight: 500;
     }
 
     span {
@@ -906,8 +906,8 @@ footer {
     }
 }
 
-// mobile view
-@media (max-width: 480px) {
+// mobile, tablet and small screen view
+@media (max-width: 1024px) {
     .container {
         width: 100%;
     }
@@ -985,11 +985,12 @@ footer {
                     left: 100%;
                     flex-direction: column;
                     align-items: flex-start;
-                    gap: 50px;
-                    background-color: gray;
+                    background-color: whitesmoke;
                     color: black;
-                    padding: 100px 0 100px 20px;
+                    padding-top: 100px;
                     z-index: 98;
+                    font-size: 20px;
+                    font-family: 'cormorant garamond';
                     transition: 1s;
 
                     .navRightItem {
@@ -997,15 +998,32 @@ footer {
                         height: auto;
                     }
 
+                    .navRightItem:hover {
+                        border: none;
+                    }
+
                     .navRightLink {
+                        height: 70px;
                         padding: 0;
                         justify-content: flex-start;
+                        padding: 0 20px;
+
+                        &:hover {
+                            background-color: darkgray;
+                        }
                     }
 
                     .about {
                         flex-direction: column;
-                        gap: 20px;                        
+
+                        &:hover {
+                            .aboutDropdown {
+                                border-top-color: transparent;
+                            }
+                        }
+
                         .aboutDropdown {
+                            width: 100%;
                             opacity: 1;
                             visibility: visible;
                             background-color: transparent;
@@ -1015,26 +1033,33 @@ footer {
                             top: 0;
                             left: 0;
                             box-shadow: none;
-                            padding-left: 20px;
+                            margin-left: 20px;
                             align-self: flex-start;
-
+                            
                             .dropdownList {
-                                padding: 0;
                                 color: black;
                                 height: 100%;
                                 width: 100%;
-
+                                
                                 .dropdownItem {
-                                    width: 100%;
+                                    padding-left: 20px;
                                     height: 50%;
+
+                                    &:hover {
+                                        background-color: darkgray;
+                                    }
                                 }
                             }
                         }
                     }
                     
-                    .navRightItem:first-child, .navRightLink {
-                        border: none;
+                    .navRightItem:first-child, .navRightItem:hover {
+                        border-color: transparent;
                     }
+                }
+
+                .navRightButton {
+                    margin-left: 20px;
                 }
             }
         }
@@ -1056,10 +1081,6 @@ footer {
 
         .left, .right {
             width: 100%;
-        }
-
-        p {
-            font-weight: 100;
         }
     }
 
