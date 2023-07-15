@@ -556,8 +556,9 @@ header {
 }
 
 main {
+    height: 50vh;
     .container {
-        height: 50vh;
+        height: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -918,10 +919,11 @@ footer {
         font-size: 20px;
     }
 
-    .infoBox {
-        height: 400px;
+    .infoCard {
+        padding: 20px;
+        grid-template-rows: auto 100px auto;
     }
-
+    
     .moveToTop, .cookie {
         display: none !important;
     }
@@ -937,6 +939,8 @@ footer {
     }
 
     header {
+        position: relative;
+        
         .headerNav {
             height: 100px;
             width: 100vw;
@@ -1035,6 +1039,74 @@ footer {
                         border: none;
                     }
                 }
+            }
+        }
+    }
+
+    .title {
+        h2 {
+            font-size: 1em;
+        }
+    }
+
+    main {
+        height: 150vh;
+
+        .container {
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+
+        .left, .right {
+            width: 100%;
+        }
+
+        p {
+            font-weight: 100;
+        }
+    }
+
+    .detail {
+        .container {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(6, auto);
+            grid-template-areas: "bank"
+            "bankInfo"            
+            "financeInfo"
+            "finance"
+            "wallet"
+            "walletInfo";
+            gap: 50px;
+        }
+    }
+
+    .slogan {
+        height: 70vh;
+    }
+
+    .detail2 {
+        .container {
+            grid-template-areas: "justice"
+            "justiceInfo"
+            "carInfo"
+            "car"
+            "jury"
+            "juryInfo";
+        }
+    }
+
+    footer {
+        height: auto;
+
+        .container {
+            grid-template-rows: auto 100px auto 100px auto;
+        }
+
+        .footerDetail {
+            .fdSocial {
+                justify-content: center;
+                flex-wrap: wrap;
+                padding: 0 20px;
             }
         }
     }
