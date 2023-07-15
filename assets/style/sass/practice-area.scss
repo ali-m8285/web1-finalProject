@@ -190,7 +190,8 @@ p {
         font-size: 2em;
     }
 
-    p, ul {
+    p,
+    ul {
         font-weight: 300;
         letter-spacing: 0;
         font-size: calc(1em + 1px);
@@ -201,7 +202,8 @@ p {
         font-weight: 500;
     }
 
-    .top, .bottom {
+    .top,
+    .bottom {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -210,7 +212,7 @@ p {
     .bottom {
         gap: 20px;
     }
-    
+
     .note {
         padding-left: 20px;
         border-left: 5px $blue solid;
@@ -221,14 +223,16 @@ p {
     }
 }
 
-.infoCard, .titleCard {
+.infoCard,
+.titleCard {
     transition: 0.5s;
-    
+
     &:hover {
         transform: scale(1.01);
         box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.5);
     }
 }
+
 // ******************************************************************
 
 .info {
@@ -382,7 +386,7 @@ header {
                     border-right: 2px $silver solid;
                     padding: 0 20px;
                 }
-                
+
                 .about {
                     position: relative;
 
@@ -555,6 +559,7 @@ header {
 
 main {
     height: 50vh;
+
     .container {
         height: 100%;
         display: flex;
@@ -887,23 +892,19 @@ footer {
     }
 }
 
-.moveToTopButtonArea {
-    position: relative;
-
-    .moveToTop {
-        width: 50px;
-        height: 50px;
-        background-color: $silver;
-        opacity: 0.5;
-        position: sticky;
-        top: 90vh;
-        z-index: 99;
-        margin-left: calc(100vw - 80px);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transform: rotate(-90deg);
-    }
+.moveToTop {
+    width: 50px;
+    height: 50px;
+    background-color: $silver;
+    opacity: 0.5;
+    position: sticky;
+    top: 90vh;
+    z-index: 99;
+    margin-left: calc(100vw - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-90deg);
 }
 
 // mobile, tablet and small screen view
@@ -920,8 +921,9 @@ footer {
         padding: 20px;
         grid-template-rows: auto 100px auto;
     }
-    
-    .moveToTop, .cookie {
+
+    .moveToTop,
+    .cookie {
         display: none !important;
     }
 
@@ -937,11 +939,11 @@ footer {
 
     header {
         position: relative;
-        
+
         .headerNav {
             height: 100px;
             width: 100vw;
-            
+
             .navLeft {
                 .logo {
                     width: 200px;
@@ -950,7 +952,7 @@ footer {
 
             .navRight {
                 flex-direction: row-reverse;
-                
+
                 .menuOpen {
                     width: 20px;
                     height: 20px;
@@ -965,18 +967,18 @@ footer {
                     z-index: 99;
                 }
 
-                #burgerCheck:checked ~ .navRightList{
+                #burgerCheck:checked~.navRightList {
                     transform: translate(-100%, 00);
                 }
 
-                #burgerCheck:checked + .menuOpen {
+                #burgerCheck:checked+.menuOpen {
                     display: none;
                 }
 
-                #burgerCheck:checked ~ .menuClose {
+                #burgerCheck:checked~.menuClose {
                     display: block;
                 }
-                
+
                 .navRightList {
                     height: 100vh;
                     width: 90%;
@@ -1035,12 +1037,12 @@ footer {
                             box-shadow: none;
                             margin-left: 20px;
                             align-self: flex-start;
-                            
+
                             .dropdownList {
                                 color: black;
                                 height: 100%;
                                 width: 100%;
-                                
+
                                 .dropdownItem {
                                     padding-left: 20px;
                                     height: 50%;
@@ -1052,8 +1054,9 @@ footer {
                             }
                         }
                     }
-                    
-                    .navRightItem:first-child, .navRightItem:hover {
+
+                    .navRightItem:first-child,
+                    .navRightItem:hover {
                         border-color: transparent;
                     }
                 }
@@ -1079,7 +1082,8 @@ footer {
             justify-content: space-evenly;
         }
 
-        .left, .right {
+        .left,
+        .right {
             width: 100%;
         }
     }
@@ -1089,11 +1093,11 @@ footer {
             grid-template-columns: 1fr;
             grid-template-rows: repeat(6, auto);
             grid-template-areas: "bank"
-            "bankInfo"            
-            "financeInfo"
-            "finance"
-            "wallet"
-            "walletInfo";
+                "bankInfo"
+                "financeInfo"
+                "finance"
+                "wallet"
+                "walletInfo";
             gap: 50px;
         }
     }
@@ -1105,11 +1109,11 @@ footer {
     .detail2 {
         .container {
             grid-template-areas: "justice"
-            "justiceInfo"
-            "carInfo"
-            "car"
-            "jury"
-            "juryInfo";
+                "justiceInfo"
+                "carInfo"
+                "car"
+                "jury"
+                "juryInfo";
         }
     }
 

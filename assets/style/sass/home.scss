@@ -358,7 +358,7 @@ header {
                     border-right: 2px $silver solid;
                     padding: 0 20px;
                 }
-                
+
                 .about {
                     position: relative;
 
@@ -974,23 +974,19 @@ footer {
     }
 }
 
-.moveToTopButtonArea {
-    position: relative;
-
-    .moveToTop {
-        width: 50px;
-        height: 50px;
-        background-color: $silver;
-        opacity: 0.5;
-        position: sticky;
-        top: 90vh;
-        z-index: 99;
-        margin-left: calc(100vw - 80px);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transform: rotate(-90deg);
-    }
+.moveToTop {
+    width: 50px;
+    height: 50px;
+    background-color: $silver;
+    opacity: 0.5;
+    position: sticky;
+    top: 90vh;
+    z-index: 99;
+    margin-left: calc(100vw - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-90deg);
 }
 
 //mobile, tablet and small screen view
@@ -1007,7 +1003,8 @@ footer {
         height: 400px;
     }
 
-    .moveToTop, .cookie {
+    .moveToTop,
+    .cookie {
         display: none !important;
     }
 
@@ -1023,11 +1020,11 @@ footer {
 
     header {
         position: relative;
-        
+
         .headerNav {
             height: 100px;
             width: 100vw;
-            
+
             .navLeft {
                 .logo {
                     width: 200px;
@@ -1036,7 +1033,7 @@ footer {
 
             .navRight {
                 flex-direction: row-reverse;
-                
+
                 .menuOpen {
                     width: 20px;
                     height: 20px;
@@ -1051,18 +1048,18 @@ footer {
                     z-index: 99;
                 }
 
-                #burgerCheck:checked ~ .navRightList{
+                #burgerCheck:checked~.navRightList {
                     transform: translate(-100%, 00);
                 }
 
-                #burgerCheck:checked + .menuOpen {
+                #burgerCheck:checked+.menuOpen {
                     display: none;
                 }
 
-                #burgerCheck:checked ~ .menuClose {
+                #burgerCheck:checked~.menuClose {
                     display: block;
                 }
-                
+
                 .navRightList {
                     height: 100vh;
                     width: 90%;
@@ -1121,12 +1118,12 @@ footer {
                             box-shadow: none;
                             margin-left: 20px;
                             align-self: flex-start;
-                            
+
                             .dropdownList {
                                 color: black;
                                 height: 100%;
                                 width: 100%;
-                                
+
                                 .dropdownItem {
                                     padding-left: 20px;
                                     height: 50%;
@@ -1138,8 +1135,9 @@ footer {
                             }
                         }
                     }
-                    
-                    .navRightItem:first-child, .navRightItem:hover {
+
+                    .navRightItem:first-child,
+                    .navRightItem:hover {
                         border-color: transparent;
                     }
                 }
@@ -1187,7 +1185,8 @@ footer {
             flex-direction: column;
             justify-content: space-evenly;
 
-            .detail, .more {
+            .detail,
+            .more {
                 width: 100%;
                 height: auto;
             }
