@@ -229,7 +229,7 @@ p {
 
     &:hover {
         transform: scale(1.01);
-        box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.5);
     }
 }
 
@@ -1055,7 +1055,7 @@ footer {
                         }
                     }
 
-                    .navRightItem:first-child,
+                    .navRightItem:nth-child(2),
                     .navRightItem:hover {
                         border-color: transparent;
                     }
